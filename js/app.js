@@ -18,16 +18,16 @@ var ViewModel = function() {
         if(this.clickCount() < 10) {
             level = "Newborn";
             return level;
-        } else if (this.clickCount() < 20 ) {
+        } else if (this.clickCount() < 50 ) {
             level = "Infant";
             return level;
-        } else if (this.clickCount() < 30) {
+        } else if (this.clickCount() < 100) {
             level = "Toddler";
             return level;
-        } else if (this.clickCount() < 40) {
+        } else if (this.clickCount() < 250) {
             level = "Child";
             return level;
-        } else if (this.clickCount() < 50) {
+        } else if (this.clickCount() < 500) {
             level = "Teen";
             return level;
         } else {

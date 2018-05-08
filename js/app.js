@@ -8,6 +8,27 @@ var ViewModel = function() {
         this.clickCount(this.clickCount() + 1);
     };
 
+    this.level = ko.computed(function(){
+        if(this.clickCount() < 10) {
+            level = "Newborn";
+            return level;
+        } else if (this.clickCount() < 20 ) {
+            level = "Infant";
+            return level;
+        } else if (this.clickCount() < 30) {
+            level = "Toddler";
+            return level;
+        } else if (this.clickCount() < 40) {
+            level = "Child";
+            return level;
+        } else if (this.clickCount() < 50) {
+            level = "Teen";
+            return level;
+        } else {
+            level = "Adult";
+            return level;
+        };
+    }, this);
 };
 
 ko.applyBindings(new ViewModel());

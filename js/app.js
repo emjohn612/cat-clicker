@@ -9,28 +9,28 @@ var initialCats = [
 {
     clickCount : 0,
     name : 'Tiger',
-    imgSrc : '4154543904_6e2428c421_z.jpg',
+    imgSrc : 'img/4154543904_6e2428c421_z.jpg',
     imgAttribution : 'https://www.flickr.com/photos/xshamx/4154543904',
     nickNames: ["Tigger"]
 },
 {
     clickCount : 0,
     name : 'Scaredy',
-    imgSrc : '22252709_010df3379e_z.jpg',
+    imgSrc : 'img/22252709_010df3379e_z.jpg',
     imgAttribution : 'https://www.flickr.com/photos/kpjas/22252709',
     nickNames: ["Casper"]
 },
 {
     clickCount : 0,
     name : 'Shadow',
-    imgSrc : '1413379559_412a540d29_z.jpg',
+    imgSrc : 'img/1413379559_412a540d29_z.jpg',
     imgAttribution : 'https://www.flickr.com/photos/malfet/1413379559',
     nickNames: ["Shooby"]
 },
 {
     clickCount : 0,
     name : 'Sleepy',
-    imgSrc : '9648464288_2516b35537_z.jpg',
+    imgSrc : 'img/9648464288_2516b35537_z.jpg',
     imgAttribution : 'https://www.flickr.com/photos/onesharp/9648464288',
     nickNames: ["Zzzzz"]
 }
@@ -80,6 +80,10 @@ var ViewModel = function() {
 
     this.incrementCounter = function(){
         this.clickCount(this.clickCount() + 1);
+    };
+
+    this.catView = function(clickedCat) {
+        self.currentCat(clickedCat)
     };
 };
 
